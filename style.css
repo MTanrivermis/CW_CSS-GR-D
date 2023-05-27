@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+.grid {
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "aside aside aside section"
+    "main main main section"
+    "footer footer footer footer";
+  grid-template-columns: repeat(4, 3fr);
+  grid-template-rows: 1fr 3fr 1.5fr 0.8fr;
+  height: 100vh;
+  gap: 20px;
+  margin: 20px 250px;
+}
+
+header,
+aside,
+section,
+main,
+footer {
+  background-color: rgb(66, 77, 227);
+  color: white;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+}
+
+header {
+  grid-area: header;
+}
+
+section {
+  grid-area: section;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
